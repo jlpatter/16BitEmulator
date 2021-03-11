@@ -17,6 +17,6 @@ HalfAdder::~HalfAdder() {
 std::pair<bool, bool> HalfAdder::operate(bool a, bool b) {
     bool andOutput = andGate->operate(a, b);
     bool xorOutput = xorGate->operate(a, b);
-    return std::make_pair(andOutput, xorOutput);
+    return {andOutput, xorOutput};
 }
 
