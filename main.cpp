@@ -1,10 +1,10 @@
 #include <iostream>
-#include "gates/and_gate.h"
+#include "gates/OrGate.h"
 
 int main() {
-    auto *gate = new AndGate();
-    bool x = gate->operate(true, true);
+    auto *gate = new OrGate();
+    bool x = gate->operate(true, false);
     std::cout << x << std::endl;
-    std::cout << "Hello, World!" << std::endl;
+    delete gate;
     return 0;
 }

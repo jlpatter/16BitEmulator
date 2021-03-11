@@ -2,11 +2,11 @@
 // Created by Joshua on 3/10/2021.
 //
 
-#ifndef INC_16BITEMULATOR_AND_GATE_H
-#define INC_16BITEMULATOR_AND_GATE_H
+#ifndef INC_16BITEMULATOR_ANDGATE_H
+#define INC_16BITEMULATOR_ANDGATE_H
 
-#include "nand_gate.h"
-#include "not_gate.h"
+#include "NandGate.h"
+#include "NotGate.h"
 
 class AndGate {
 private:
@@ -14,6 +14,7 @@ private:
     NandGate *nandGate;
 public:
     AndGate();
+    ~AndGate();
     bool operate(bool a, bool b);
 };
-#endif //INC_16BITEMULATOR_AND_GATE_H
+#endif //INC_16BITEMULATOR_ANDGATE_H
