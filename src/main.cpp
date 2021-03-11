@@ -1,8 +1,8 @@
 #include <iostream>
-#include "../include/gates/OrGate.h"
+#include "../include/gates/XORGate.h"
 
 int main() {
-    auto *gate = new OrGate();
+    auto *gate = new XORGate();
     bool x = gate->operate(true, false);
     std::cout << x << std::endl;
     delete gate;
