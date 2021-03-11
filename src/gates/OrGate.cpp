@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "OrGate.h"
+#include "../../include/gates/OrGate.h"
 
 OrGate::OrGate() {
     notGate1 = new NotGate();

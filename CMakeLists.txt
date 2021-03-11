@@ -3,4 +3,4 @@ project(16BitEmulator)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(16BitEmulator main.cpp gates/NotGate.h gates/NotGate.cpp gates/AndGate.h gates/NandGate.h gates/NandGate.cpp gates/AndGate.cpp gates/OrGate.cpp gates/OrGate.h)
+add_executable(16BitEmulator src/main.cpp include/gates/NotGate.h src/gates/NotGate.cpp include/gates/AndGate.h include/gates/NandGate.h src/gates/NandGate.cpp src/gates/AndGate.cpp src/gates/OrGate.cpp include/gates/OrGate.h)

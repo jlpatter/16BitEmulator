@@ -2,7 +2,7 @@
 // Created by Joshua on 3/10/2021.
 //
 
-#include "AndGate.h"
+#include "../../include/gates/AndGate.h"
 
 AndGate::AndGate() {
     nandGate = new NandGate();

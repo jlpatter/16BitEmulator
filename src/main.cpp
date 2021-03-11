@@ -1,5 +1,5 @@
 #include <iostream>
-#include "gates/OrGate.h"
+#include "../include/gates/OrGate.h"
 
 int main() {
     auto *gate = new OrGate();
