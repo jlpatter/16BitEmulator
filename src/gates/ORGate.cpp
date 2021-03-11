@@ -3,21 +3,21 @@
 //
 
 #include <iostream>
-#include "../../include/gates/OrGate.h"
+#include "../../include/gates/ORGate.h"
 
-OrGate::OrGate() {
-    notGate1 = new NotGate();
-    notGate2 = new NotGate();
-    nandGate = new NandGate();
+ORGate::ORGate() {
+    notGate1 = new NOTGate();
+    notGate2 = new NOTGate();
+    nandGate = new NANDGate();
 }
 
-OrGate::~OrGate() {
+ORGate::~ORGate() {
     delete notGate1;
     delete notGate2;
     delete nandGate;
 }
 
-bool OrGate::operate(bool a, bool b) {
+bool ORGate::operate(bool a, bool b) {
     bool notA = notGate1->operate(a);
     bool notB = notGate2->operate(b);
     return nandGate->operate(notA, notB);

@@ -5,16 +5,16 @@
 #ifndef INC_16BITEMULATOR_XORGATE_H
 #define INC_16BITEMULATOR_XORGATE_H
 
-#include "OrGate.h"
-#include "AndGate.h"
-#include "NotGate.h"
+#include "ORGate.h"
+#include "ANDGate.h"
+#include "NOTGate.h"
 
 class XORGate {
 private:
-    OrGate *orGate;
-    AndGate *andGate1;
-    AndGate *andGate2;
-    NotGate *notGate;
+    ORGate *orGate;
+    ANDGate *andGate1;
+    ANDGate *andGate2;
+    NOTGate *notGate;
 public:
     XORGate();
     ~XORGate();

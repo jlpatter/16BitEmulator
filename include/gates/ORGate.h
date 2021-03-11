@@ -6,17 +6,17 @@
 #define INC_16BITEMULATOR_ORGATE_H
 
 
-#include "NotGate.h"
-#include "NandGate.h"
+#include "NOTGate.h"
+#include "NANDGate.h"
 
-class OrGate {
+class ORGate {
 private:
-    NotGate *notGate1;
-    NotGate *notGate2;
-    NandGate *nandGate;
+    NOTGate *notGate1;
+    NOTGate *notGate2;
+    NANDGate *nandGate;
 public:
-    OrGate();
-    ~OrGate();
+    ORGate();
+    ~ORGate();
     bool operate(bool a, bool b);
 };
 

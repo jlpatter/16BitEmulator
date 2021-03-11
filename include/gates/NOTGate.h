@@ -4,7 +4,7 @@
 
 #ifndef INC_16BITEMULATOR_NOTGATE_H
 #define INC_16BITEMULATOR_NOTGATE_H
-class NotGate {
+class NOTGate {
 public:
     bool operate(bool a);
 };

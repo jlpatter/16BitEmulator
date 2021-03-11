@@ -5,16 +5,16 @@
 #ifndef INC_16BITEMULATOR_ANDGATE_H
 #define INC_16BITEMULATOR_ANDGATE_H
 
-#include "NandGate.h"
-#include "NotGate.h"
+#include "NANDGate.h"
+#include "NOTGate.h"
 
-class AndGate {
+class ANDGate {
 private:
-    NotGate *notGate;
-    NandGate *nandGate;
+    NOTGate *notGate;
+    NANDGate *nandGate;
 public:
-    AndGate();
-    ~AndGate();
+    ANDGate();
+    ~ANDGate();
     bool operate(bool a, bool b);
 };
 #endif //INC_16BITEMULATOR_ANDGATE_H

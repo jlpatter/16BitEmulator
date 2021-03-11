@@ -5,10 +5,10 @@
 #include "../../include/gates/XORGate.h"
 
 XORGate::XORGate() {
-    orGate = new OrGate();
-    andGate1 = new AndGate();
-    andGate2 = new AndGate();
-    notGate = new NotGate();
+    orGate = new ORGate();
+    andGate1 = new ANDGate();
+    andGate2 = new ANDGate();
+    notGate = new NOTGate();
 }
 
 XORGate::~XORGate() {

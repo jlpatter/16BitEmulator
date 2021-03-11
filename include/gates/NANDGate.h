@@ -4,7 +4,7 @@
 
 #ifndef INC_16BITEMULATOR_NANDGATE_H
 #define INC_16BITEMULATOR_NANDGATE_H
-class NandGate {
+class NANDGate {
 public:
     bool operate(bool a, bool b);
 };
