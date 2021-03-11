@@ -1,10 +1,11 @@
 #include <iostream>
-#include "../include/gates/XORGate.h"
+#include "../include/arithmetics/HalfAdder.h"
 
 int main() {
-    auto *gate = new XORGate();
-    bool x = gate->operate(true, false);
-    std::cout << x << std::endl;
-    delete gate;
+    auto *halfAdder = new HalfAdder();
+    std::pair<bool, bool> resultPair = halfAdder->operate(true, false);
+    std::cout << resultPair.first;
+    std::cout << resultPair.second << std::endl;
+    delete halfAdder;
     return 0;
 }
