@@ -1,15 +1,16 @@
 #include <iostream>
-#include "../include/arithmetics/Increment.h"
+#include "../include/arithmetics/Subtraction.h"
 
 int main() {
-    auto *incrementer = new Increment();
-    bool aInput[] = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true};  // 1
-    bool *result = incrementer->operate(aInput);
-    for (int i = 0; i < 17; i++) {
+    auto *subtractor = new Subtraction();
+    bool aInput[] = {false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true};  // 111
+    bool bInput[] = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true};  // 1
+    bool *result = subtractor->operate(aInput, bInput);
+    for (int i = 0; i < 16; i++) {
         std::cout << result[i];
     }
     std::cout << std::endl;
-    delete incrementer;
+    delete subtractor;
     delete[] result;
     return 0;
 }

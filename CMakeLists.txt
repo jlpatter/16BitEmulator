@@ -3,4 +3,4 @@ project(16BitEmulator)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(16BitEmulator src/main.cpp include/gates/NOTGate.h src/gates/NOTGate.cpp include/gates/ANDGate.h include/gates/NANDGate.h src/gates/NANDGate.cpp src/gates/ANDGate.cpp src/gates/ORGate.cpp include/gates/ORGate.h include/gates/XORGate.h src/gates/XORGate.cpp include/arithmetics/HalfAdder.h src/arithmetics/HalfAdder.cpp include/arithmetics/FullAdder.h src/arithmetics/FullAdder.cpp include/arithmetics/MultiAdder.h src/arithmetics/MultiAdder.cpp include/arithmetics/Increment.h src/arithmetics/Increment.cpp)
+add_executable(16BitEmulator src/main.cpp include/gates/NOTGate.h src/gates/NOTGate.cpp include/gates/ANDGate.h include/gates/NANDGate.h src/gates/NANDGate.cpp src/gates/ANDGate.cpp src/gates/ORGate.cpp include/gates/ORGate.h include/gates/XORGate.h src/gates/XORGate.cpp include/arithmetics/HalfAdder.h src/arithmetics/HalfAdder.cpp include/arithmetics/FullAdder.h src/arithmetics/FullAdder.cpp include/arithmetics/MultiAdder.h src/arithmetics/MultiAdder.cpp include/arithmetics/Increment.h src/arithmetics/Increment.cpp include/arithmetics/Subtraction.h src/arithmetics/Subtraction.cpp)
