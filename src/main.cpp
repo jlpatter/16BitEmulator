@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/arithmetics/Subtraction.h"
+#include "../include/arithmetic/Subtraction.h"
 
 int main() {
     auto *subtractor = new Subtraction();

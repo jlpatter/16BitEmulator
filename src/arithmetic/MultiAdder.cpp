@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "../../include/arithmetics/MultiAdder.h"
+#include "../../include/arithmetic/MultiAdder.h"
 
 MultiAdder::MultiAdder() {
     fullAdder = new FullAdder[16];

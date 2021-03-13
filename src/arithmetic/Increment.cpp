@@ -2,7 +2,7 @@
 // Created by Joshua on 3/12/2021.
 //
 
-#include "../../include/arithmetics/Increment.h"
+#include "../../include/arithmetic/Increment.h"
 
 Increment::Increment() {
     multiAdder = new MultiAdder();

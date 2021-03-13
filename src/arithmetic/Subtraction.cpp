@@ -2,7 +2,7 @@
 // Created by Joshua on 3/12/2021.
 //
 
-#include "../../include/arithmetics/Subtraction.h"
+#include "../../include/arithmetic/Subtraction.h"
 
 Subtraction::Subtraction() {
     notGate = new NOTGate[16];

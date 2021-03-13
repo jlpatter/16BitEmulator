@@ -2,7 +2,7 @@
 // Created by Joshua on 3/11/2021.
 //
 
-#include "../../include/arithmetics/FullAdder.h"
+#include "../../include/arithmetic/FullAdder.h"
 
 FullAdder::FullAdder() {
     orGate = new ORGate();

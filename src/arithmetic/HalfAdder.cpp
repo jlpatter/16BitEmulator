@@ -2,7 +2,7 @@
 // Created by Joshua on 3/11/2021.
 //
 
-#include "../../include/arithmetics/HalfAdder.h"
+#include "../../include/arithmetic/HalfAdder.h"
 
 HalfAdder::HalfAdder() {
     andGate = new ANDGate();
