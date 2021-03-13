@@ -4,12 +4,19 @@
 
 #include "../../include/plumbing/Selector.h"
 
-bool *Selector::operate(bool s, bool *a, bool *b) {
+bool *Selector::operate(bool s, const bool *a, const bool *b) {
+    bool *result = new bool[16];
     if (s) {
-        return a;
+        for (int i = 0; i < 16; i++) {
+            result[i] = a[i];
+        }
+        return result;
     }
     else {
-        return b;
+        for (int i = 0; i < 16; i++) {
+            result[i] = b[i];
+        }
+        return result;
     }
 }
 

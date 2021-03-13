@@ -7,7 +7,7 @@
 
 class Selector {
 public:
-    bool* operate(bool s, bool* a, bool* b);
+    bool* operate(bool s, const bool* a, const bool* b);
 };
 
 #endif //INC_16BITEMULATOR_SELECTOR_H

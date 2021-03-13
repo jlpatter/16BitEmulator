@@ -14,7 +14,7 @@ MultiAdder::~MultiAdder() {
 }
 
 bool* MultiAdder::operate(bool *a, bool *b, bool c) {
-    bool* result = new bool[16];
+    bool *result = new bool[16];
 
     std::pair<bool, bool> output = fullAdder[15].operate(a[15], b[15], c);
     result[15] = output.second;
