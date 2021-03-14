@@ -1,16 +1,11 @@
 #include <iostream>
-#include "../include/logic/ALU.h"
+#include "../include/logic/Condition.h"
 
 int main() {
-    auto *alu = new ALU();
+    auto *condition = new Condition();
     bool aInput[] = {false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true};  // 111
-    bool bInput[] = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false};  // 10
-    bool *result = alu->operate(false, false, false, false, true, false, aInput, bInput);
-    for (int i = 0; i < 16; i++) {
-        std::cout << result[i];
-    }
-    std::cout << std::endl;
-    delete alu;
-    delete[] result;
+    bool result = condition->operate(false, true, true, aInput);
+    std::cout << result << std::endl;
+    delete condition;
     return 0;
 }
