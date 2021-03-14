@@ -6,14 +6,14 @@
 #define INC_16BITEMULATOR_COUNTER_H
 
 #include "Register.h"
-#include "../plumbing/Selector.h"
+#include "../plumbing/Selector16.h"
 #include "../arithmetic/Increment.h"
 
 class Counter {
 private:
     bool *out;
     Register *aRegister;
-    Selector *selector;
+    Selector16 *selector;
     Increment *incrementor;
 public:
     Counter();

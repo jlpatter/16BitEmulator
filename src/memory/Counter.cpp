@@ -10,7 +10,7 @@ Counter::Counter() {
         out[i] = false;
     }
     aRegister = new Register();
-    selector = new Selector();
+    selector = new Selector16();
     incrementor = new Increment();
 }
 

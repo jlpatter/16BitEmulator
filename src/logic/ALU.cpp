@@ -9,8 +9,8 @@ ALU::ALU() {
     ualuTwo = new UALU();
     multiAdder = new MultiAdder();
     andGate = new ANDGate[16];
-    selectorOne = new Selector();
-    selectorTwo = new Selector();
+    selectorOne = new Selector16();
+    selectorTwo = new Selector16();
     notGate = new NOTGate[16];
 }
 

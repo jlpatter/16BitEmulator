@@ -14,8 +14,8 @@ private:
     UALU *ualuTwo;
     MultiAdder *multiAdder;
     ANDGate *andGate;
-    Selector *selectorOne;
-    Selector *selectorTwo;
+    Selector16 *selectorOne;
+    Selector16 *selectorTwo;
     NOTGate *notGate;
 public:
     ALU();

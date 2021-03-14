@@ -1,5 +1,5 @@
 //
-// Created by Joshua on 3/13/2021.
+// Created by Joshua on 3/14/2021.
 //
 
 #ifndef INC_16BITEMULATOR_SELECTOR_H
@@ -7,7 +7,7 @@
 
 class Selector {
 public:
-    bool* operate(bool s, const bool* a, const bool* b);
+    bool operate(bool a, bool x, bool y);
 };
 
 #endif //INC_16BITEMULATOR_SELECTOR_H

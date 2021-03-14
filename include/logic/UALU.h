@@ -5,13 +5,13 @@
 #ifndef INC_16BITEMULATOR_UALU_H
 #define INC_16BITEMULATOR_UALU_H
 
-#include "../plumbing/Selector.h"
+#include "../plumbing/Selector16.h"
 #include "../gates/NOTGate.h"
 
 class UALU {
 private:
-    Selector *selectOne;
-    Selector *selectTwo;
+    Selector16 *selectOne;
+    Selector16 *selectTwo;
     NOTGate *notGate;
 public:
     UALU();

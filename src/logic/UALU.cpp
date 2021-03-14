@@ -5,8 +5,8 @@
 #include "../../include/logic/UALU.h"
 
 UALU::UALU() {
-    selectOne = new Selector();
-    selectTwo = new Selector();
+    selectOne = new Selector16();
+    selectTwo = new Selector16();
     notGate = new NOTGate[16];
 }
 

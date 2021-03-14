@@ -1,22 +1,15 @@
 //
-// Created by Joshua on 3/13/2021.
+// Created by Joshua on 3/14/2021.
 //
 
 #include "../../include/plumbing/Selector.h"
 
-bool *Selector::operate(bool s, const bool *a, const bool *b) {
-    bool *result = new bool[16];
-    if (s) {
-        for (int i = 0; i < 16; i++) {
-            result[i] = a[i];
-        }
-        return result;
+bool Selector::operate(bool a, bool x, bool y) {
+    if (a) {
+        return x;
     }
     else {
-        for (int i = 0; i < 16; i++) {
-            result[i] = b[i];
-        }
-        return result;
+        return y;
     }
 }
 
