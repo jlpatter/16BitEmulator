@@ -24,7 +24,7 @@ private:
 public:
     Condition();
     ~Condition();
-    bool operate(bool lt, bool eq, bool gt, bool *x);
+    bool *operate(bool lt, bool eq, bool gt, bool *x);
 };
 
 #endif //INC_16BITEMULATOR_CONDITION_H

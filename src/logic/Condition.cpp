@@ -30,7 +30,7 @@ Condition::~Condition() {
     delete orGateTwo;
 }
 
-bool Condition::operate(bool lt, bool eq, bool gt, bool *x) {
+bool *Condition::operate(bool lt, bool eq, bool gt, bool *x) {
     bool lessThanZeroResult = lessThanZero->operate(x);
     bool equalToZeroResult = equalToZero->operate(x);
     bool andGateOneResult = andGateOne->operate(lessThanZeroResult, lt);
@@ -41,6 +41,8 @@ bool Condition::operate(bool lt, bool eq, bool gt, bool *x) {
     bool andGateFourResult = andGateFour->operate(notGateOneResult, notGateTwoResult);
     bool andGateThreeResult = andGateThree->operate(gt, andGateFourResult);
     bool orGateTwoResult = orGateTwo->operate(orGateOneResult, andGateThreeResult);
-    return orGateTwoResult;
+    bool *result = new bool[1];
+    result[0] = orGateTwoResult;
+    return result;
 }
 

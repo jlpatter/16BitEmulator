@@ -6,9 +6,11 @@ int main() {
     bool bInput[] = {false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true};  // 101
     bool **result = controlUnit->operate(bInput, false);
     delete[] result[1];
+    delete[] result[0];
     delete[] result;
     result = controlUnit->operate(bInput, true);
     delete[] result[1];
+    delete[] result[0];
     delete[] result;
     bool **resultTwo = controlUnit->operate(bInput, false);
     std::cout << resultTwo[0][0] << std::endl;
@@ -19,6 +21,7 @@ int main() {
     std::cout << std::endl;
     delete controlUnit;
     delete[] firstResult;
+    delete[] resultTwo[0];
     delete[] resultTwo;
     return 0;
 }
