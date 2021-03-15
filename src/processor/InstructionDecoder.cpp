@@ -18,9 +18,13 @@ InstructionDecoder::~InstructionDecoder() {
 
 bool **InstructionDecoder::operate(bool *x) {
     bool fifteen = x[0];
-    bool zeroBool[] = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};  // 0
+    bool *zeroBool = new bool[16];
+    for (int i = 0; i < 16; i++) {
+        zeroBool[i] = false;
+    }
     bool *selectOneResult = selectorOne->operate(fifteen, x, zeroBool);
     bool *w = selectorTwo->operate(fifteen, zeroBool, x);
+    delete[] zeroBool;
     bool *firstHalf = new bool[16];
     for (int i = 0; i < 16; i++) {
         if (i != 10) {
