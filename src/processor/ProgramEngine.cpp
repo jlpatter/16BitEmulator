@@ -64,7 +64,12 @@ bool *ProgramEngine::operate(bool j, bool *x, bool cl) {
     bool *y = counter->operate(j, x, cl);
     int addr = bitArrayToInt(y);
     currentAddress = addr;
-    return rom[addr];
+    if (addr < programSize) {
+        return rom[addr];
+    }
+    else {
+        return nullptr;
+    }
 }
 
 int ProgramEngine::bitArrayToInt(const bool *x) {
