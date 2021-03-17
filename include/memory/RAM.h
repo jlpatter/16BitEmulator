@@ -10,7 +10,6 @@
 class RAM {
 private:
     Register *aRegister;
-    static int bitArrayToInt(const bool *x);
 public:
     RAM();
     ~RAM();

@@ -1,0 +1,35 @@
+# Initialize a counter at RAM address 0
+0000000000001010    # Set A register to 10
+1110110000010000    # Copy the value from the A register to the D register
+0000000000000000    # Set A register to 0
+1111001100001000    # Copies the value from the D register to RAM at address 0
+
+# Initialize the first two variables (1, 1) at addresses 2 and 3.
+# A position pointer will be placed at address 1 to determine the current position
+1110110111100000    # Increment the A register to address 1
+1111110111001000    # Increment RAM value at address 1
+1111110111001000    # Increment RAM value at address 1
+1110110111100000    # Increment the A register to address 2
+1111110111001000    # Increment RAM value at address 2
+1110110111100000    # Increment the A register to address 3
+1111110111001000    # Increment RAM value at address 3
+
+# Begin looping
+0000000000000001    # Set A register to 1
+1111110000100000    # Copy the counter at address 1 to A register
+1111110000010000    # Set D register to the value from the address stored in the A register
+1110110111100000    # Increment the A register
+1111000010010000    # Add D with value from the previous address and itself and store in D
+1110110111100000    # Increment the A register
+1110001100001000    # Copy the value from the D register to the address stored in the A register
+1110110010100000    # Decrement the A register
+
+# Update counters and jump
+1110110000010000    # Copy the value from the A register to the D register
+0000000000000001    # Set A register to 1
+1110001100001000    # Copy the value from the D register to address 1
+0000000000000000    # Set A register to 0
+1111110010001000    # Decrement the counter at address 0
+1111110000010000    # Copy the counter at address 0 to D register
+0000000000001011    # Set A register to 11 (for looping)
+1110001100000100    # Jump if D register > 0
