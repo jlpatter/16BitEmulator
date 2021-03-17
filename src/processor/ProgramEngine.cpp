@@ -9,7 +9,8 @@
 
 ProgramEngine::ProgramEngine() {
     counter = new Counter();
-    rom = new bool*[100];
+    bool **tempROM = new bool*[100];
+    currentAddress = 0;
 
     std::ifstream infile("../fibo.joshcomp");
     std::string line;
@@ -36,16 +37,24 @@ ProgramEngine::ProgramEngine() {
         }
 
         if (hasCommand) {
-            rom[k] = input;
+            tempROM[k] = input;
             k++;
+        }
+        else {
+            delete[] input;
         }
     }
     programSize = k;
+    rom = new bool*[programSize];
+    for (int i = 0; i < programSize; i++) {
+        rom[i] = tempROM[i];
+    }
+    delete[] tempROM;
 }
 
 ProgramEngine::~ProgramEngine() {
     delete counter;
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < programSize; i++) {
         delete[] rom[i];
     }
     delete[] rom;

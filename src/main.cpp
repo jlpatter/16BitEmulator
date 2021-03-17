@@ -14,24 +14,44 @@ int main() {
 
     while (isRunning) {
         instruction = programEngine->operate(returnValue[0][0], returnValue[1], true);
-        returnValue = controlUnit->operate(instruction, true);
+        if (instruction != nullptr && programEngine->getCurrentAddress() < programEngine->getProgramSize()) {
+            delete[] returnValue[0];
+            delete[] returnValue[1];
+            delete[] returnValue;
+            returnValue = controlUnit->operate(instruction, true);
 
-        std::cout << returnValue[0][0] << std::endl;
-        for (int j = 0; j < 16; j++) {
-            std::cout << returnValue[1][j];
-        }
+            std::cout << returnValue[0][0] << std::endl;
+            for (int j = 0; j < 16; j++) {
+                std::cout << returnValue[1][j];
+            }
 
-        std::cout << std::endl;
+            std::cout << std::endl;
 
-        if (programEngine->getCurrentAddress() > programEngine->getProgramSize() || programEngine->getCurrentAddress() < 0) {
-            isRunning = false;
+            if (programEngine->getCurrentAddress() >= programEngine->getProgramSize() ||
+                programEngine->getCurrentAddress() < 0) {
+                isRunning = false;
+            } else {
+                instruction = programEngine->operate(returnValue[0][0], returnValue[1], false);
+                if (instruction != nullptr) {
+                    delete[] returnValue[0];
+                    delete[] returnValue[1];
+                    delete[] returnValue;
+                    returnValue = controlUnit->operate(instruction, false);
+                }
+                else {
+                    isRunning = false;
+                }
+            }
         }
         else {
-            instruction = programEngine->operate(returnValue[0][0], returnValue[1], false);
-            returnValue = controlUnit->operate(instruction, false);
+            isRunning = false;
         }
     }
 
+    delete[] returnValue[0];
+    delete[] returnValue[1];
+    delete[] returnValue;
     delete controlUnit;
+    delete programEngine;
     return 0;
 }
