@@ -12,10 +12,12 @@ private:
     Counter *counter;
     bool **rom;
     int programSize;
+    int currentAddress;
 public:
     ProgramEngine();
     ~ProgramEngine();
     int getProgramSize();
+    int getCurrentAddress();
     bool *operate(bool j, bool *x, bool cl);
     static int bitArrayToInt(const bool *x);
 };
