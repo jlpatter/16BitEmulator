@@ -16,8 +16,8 @@ private:
 public:
     ProgramEngine();
     ~ProgramEngine();
-    int getProgramSize();
-    int getCurrentAddress();
+    int getProgramSize() const;
+    int getCurrentAddress() const;
     bool *operate(bool j, bool *x, bool cl);
     static int bitArrayToInt(const bool *x);
 };

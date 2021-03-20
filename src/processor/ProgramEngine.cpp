@@ -82,10 +82,10 @@ int ProgramEngine::bitArrayToInt(const bool *x) {
     return ret;
 }
 
-int ProgramEngine::getProgramSize() {
+int ProgramEngine::getProgramSize() const {
     return programSize;
 }
 
-int ProgramEngine::getCurrentAddress() {
+int ProgramEngine::getCurrentAddress() const {
     return currentAddress;
 }
